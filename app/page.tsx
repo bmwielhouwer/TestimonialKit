@@ -147,6 +147,9 @@ export default function HomePage() {
             >
               Get Started Free
             </Link>
+            <p className="mt-2 text-center text-xs text-slate-400">
+              Try the live demo — no signup required.
+            </p>
           </div>
 
           {/* Pro — visually dominant, recommended option */}
