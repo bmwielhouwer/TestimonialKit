@@ -119,23 +119,23 @@ export default function HomePage() {
       <section id="pricing" className="mx-auto max-w-5xl px-4 py-16">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold text-slate-900">Simple, honest pricing</h2>
-          <p className="mt-3 text-slate-600">Start free. Upgrade once. Own it forever.</p>
+          <p className="mt-3 text-slate-600">Try it free, then unlock everything with one payment.</p>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {/* Free */}
-          <div className="flex flex-col rounded-2xl border border-slate-200 bg-white p-8">
-            <h3 className="text-lg font-semibold text-slate-900">Free</h3>
+        <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+          {/* Free — limited starter plan, intentionally understated */}
+          <div className="flex flex-col rounded-2xl border border-slate-200 bg-slate-50 p-8 md:scale-95">
+            <h3 className="text-lg font-semibold text-slate-500">Starter</h3>
             <div className="mt-4 flex items-baseline gap-1">
-              <span className="text-4xl font-extrabold text-slate-900">$0</span>
-              <span className="text-slate-500">/ forever</span>
+              <span className="text-4xl font-extrabold text-slate-700">Free</span>
             </div>
-            <p className="mt-2 text-sm text-slate-600">
-              Everything you need to start gathering social proof.
+            <p className="mt-2 text-sm text-slate-500">
+              A limited starter plan to try things out. You&apos;ll quickly outgrow it as your
+              testimonials add up.
             </p>
             <ul className="mt-6 flex-1 space-y-3">
               {freeFeatures.map((f) => (
-                <li key={f} className="flex gap-2 text-sm text-slate-700">
+                <li key={f} className="flex gap-2 text-sm text-slate-500">
                   <Check />
                   {f}
                 </li>
@@ -143,34 +143,34 @@ export default function HomePage() {
             </ul>
             <Link
               href="/collect/brightledger"
-              className="mt-8 block rounded-lg border border-slate-300 bg-white px-5 py-3 text-center font-semibold text-slate-700 transition hover:bg-slate-50"
+              className="mt-8 block rounded-lg border border-slate-300 bg-white px-5 py-3 text-center text-sm font-medium text-slate-500 transition hover:bg-slate-50"
             >
               Get Started Free
             </Link>
           </div>
 
-          {/* Pro */}
-          <div className="relative flex flex-col rounded-2xl border-2 border-indigo-600 bg-white p-8 shadow-lg">
-            <span className="absolute -top-3 left-8 rounded-full bg-indigo-600 px-3 py-1 text-xs font-semibold text-white">
-              Most popular
+          {/* Pro — visually dominant, recommended option */}
+          <div className="relative flex flex-col rounded-2xl border-2 border-indigo-600 bg-white p-8 shadow-2xl ring-2 ring-indigo-200 md:scale-110">
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-indigo-600 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-white shadow">
+              Recommended
             </span>
-            <h3 className="text-lg font-semibold text-slate-900">Pro</h3>
+            <h3 className="text-lg font-bold text-indigo-700">Pro</h3>
             <div className="mt-4 flex items-baseline gap-1">
-              <span className="text-4xl font-extrabold text-slate-900">$49</span>
+              <span className="text-5xl font-extrabold text-slate-900">$49</span>
               <span className="text-slate-500">one-time</span>
             </div>
             <p className="mt-2 text-sm text-slate-600">
-              Unlock the full toolkit with a single payment. No subscriptions.
+              The complete toolkit, yours for a single payment. No subscriptions, no limits.
             </p>
             <ul className="mt-6 flex-1 space-y-3">
               {proFeatures.map((f) => (
-                <li key={f} className="flex gap-2 text-sm text-slate-700">
+                <li key={f} className="flex gap-2 text-sm font-medium text-slate-800">
                   <Check />
                   {f}
                 </li>
               ))}
             </ul>
-            <UpgradeButton className="mt-8 block w-full rounded-lg bg-indigo-600 px-5 py-3 text-center font-semibold text-white transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-60">
+            <UpgradeButton className="mt-8 block w-full rounded-lg bg-indigo-600 px-5 py-3 text-center text-base font-semibold text-white shadow-lg transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-60">
               Upgrade to Pro
             </UpgradeButton>
           </div>
